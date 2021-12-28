@@ -7,11 +7,13 @@ import{ InvestissementService } from './../../services/investissement.service'
   styleUrls: ['./investissement.component.css']
 })
 export class InvestissementComponent {
-  title = "Doody script";
-  investissements: any[];
+  investissements: any;
   
   constructor(investissementService : InvestissementService) { 
-    this.investissements = investissementService.getInvestissements();
+      investissementService.getInvestissement().subscribe(
+        res => { console.log(res); this.investissements =  res},
+        err => { console.log(err) }
+      )
   }
 
 
