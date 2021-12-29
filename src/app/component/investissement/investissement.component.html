@@ -1,5 +1,63 @@
 
 
-<div *ngFor="let investissement of investissements">
-    <h1>{{ investissement.entreprise }}</h1>
+<div class="container">
+
+<table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>id</th>
+        <th>titreoperation</th>
+        <th>entreprise</th>
+        <th>annee_de_livraison</th>
+        <th>ville</th>
+        <th>mandataire</th>
+        <th>ppi</th>
+        <th>lycee</th>
+        <th>notification_du_marche</th>
+        <th>codeuai</th>
+        <th>longitude</th>
+        <th>etat_d_avancement</th>
+        <th>montant_des_ap_votes_en_meu</th>
+        <th>cao_attribution</th>
+        <th>latitude</th>
+        <th>maitrise_d_oeuvre</th>
+        <th>mode_de_devolution</th>
+        <th>annee_d_individualisation</th>
+        <th>enveloppe_prev_en_meu</th>
+        <th>nombre_de_lots</th>
+
+
+
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let investissement of investissements">
+        <td>{{investissement.id}}</td>
+        <td>{{investissement.titreoperation}}</td>
+        <td>{{investissement.entreprise}}</td>
+        <td>{{investissement.annee_de_livraison}}</td>
+        <td>{{investissement.ville}}</td>
+        <td>{{investissement.mandataire}}</td>
+        <td>{{investissement.ppi}}</td>
+        <td>{{investissement.lycee}}</td>
+        <td>{{investissement.notification_du_marche}}</td>
+        <td>{{investissement.codeuai}}</td>
+        <td>{{investissement.longitude}}</td>
+        <td>{{investissement.etat_d_avancement}}</td>
+        <td>{{investissement.montant_des_ap_votes_en_meu}}</td>
+        <td>{{investissement.cao_attribution}}</td>
+        <td>{{investissement.latitude}}</td>
+        <td>{{investissement.maitrise_d_oeuvre}}</td>
+        <td>{{investissement.mode_de_devolution}}</td>
+        <td>{{investissement.annee_d_individualisation}}</td>
+        <td>{{investissement.enveloppe_prev_en_meu}}</td>
+        <td>{{investissement.nombre_de_lots}}</td>
+
+        
+      </tr>
+      
+      
+    </tbody>
+  </table>
 </div>
