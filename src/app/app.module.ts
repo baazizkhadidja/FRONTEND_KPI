@@ -5,12 +5,14 @@ import { HttpClientModule } from '@angular/common/http'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { InvestissementComponent } from './component/investissement/investissement.component';
-import { InvestissementService } from './services/investissement.service'
+import { InvestissementService } from './services/investissement.service';
+import { DetailComponent } from './component/detail/detail.component'
 
 @NgModule({
   declarations: [
     AppComponent,
-    InvestissementComponent
+    InvestissementComponent,
+    DetailComponent
   ],
   imports: [
     BrowserModule,
