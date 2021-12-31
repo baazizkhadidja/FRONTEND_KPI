@@ -33,7 +33,8 @@
     </thead>
     <tbody>
       <tr *ngFor="let investissement of investissements">
-        <td>{{investissement.id}}</td>
+
+        <td><a routerLink="detail/{{investissement.id}}">{{investissement.id}}</a></td>
         <td>{{investissement.titreoperation}}</td>
         <td>{{investissement.entreprise}}</td>
         <td>{{investissement.annee_de_livraison}}</td>

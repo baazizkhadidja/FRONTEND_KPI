@@ -1,6 +1,7 @@
 import { Component} from '@angular/core';
 import{ InvestissementService } from './../../services/investissement.service'
 
+
 @Component({
   selector: 'app-investissement',
   templateUrl: './investissement.component.html',
@@ -9,7 +10,7 @@ import{ InvestissementService } from './../../services/investissement.service'
 export class InvestissementComponent {
   investissements: any;
   
-  constructor(investissementService : InvestissementService) { 
+  constructor(investissementService : InvestissementService){ 
       investissementService.getInvestissement().subscribe(
         res => { console.log(res); this.investissements =  res},
         err => { console.log(err) }
