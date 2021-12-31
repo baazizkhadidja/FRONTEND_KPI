@@ -1,21 +1,32 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { InvestissementService } from './../../services/investissement.service'
-
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-detail',
   templateUrl: './detail.component.html',
   styleUrls: ['./detail.component.css']
 })
-export class DetailComponent {
+export class DetailComponent implements OnInit{
 
-  itemInv: any;
-  titre = 'doooooody'
-  constructor(investissementService : InvestissementService) { 
+  constructor(private investissementService : InvestissementService,private activatedRoute: ActivatedRoute) {
+}
 
-    investissementService.getInvestissementById('id').subscribe(
-        res => { console.log(res); this.itemInv =  res},
-        err => { console.log(err) }
-      )
+id: any;
+itemInv:any;
+ngOnInit(): void {
+    this.activatedRoute.paramMap.subscribe(params => {
+    this.id = params.get('id');
+    });
+    this.getInvId(this.id);
+}
+getInvId(id:any){
+  this.investissementService.getInvestissementById(id).subscribe((res) =>{
+    this.itemInv = res;
+  }
+  )
 }
 }
+
+
+

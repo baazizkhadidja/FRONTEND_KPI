@@ -6,9 +6,9 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class InvestissementService {
-id:any;
-  constructor(private http: HttpClient) { }
 
+  constructor(private http: HttpClient) { }
+  id:any;
   getInvestissement(): Observable<any>
   {
     return this.http.get('http://127.0.0.1:8000/api/investissements/');
