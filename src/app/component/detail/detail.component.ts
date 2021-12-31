@@ -1,15 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { InvestissementService } from './../../services/investissement.service'
+
 
 @Component({
   selector: 'app-detail',
   templateUrl: './detail.component.html',
   styleUrls: ['./detail.component.css']
 })
-export class DetailComponent implements OnInit {
+export class DetailComponent {
 
-  constructor() { }
+  itemInv: any;
+  titre = 'doooooody'
+  constructor(investissementService : InvestissementService) { 
 
-  ngOnInit(): void {
-  }
-
+    investissementService.getInvestissementById('id').subscribe(
+        res => { console.log(res); this.itemInv =  res},
+        err => { console.log(err) }
+      )
+}
 }
