@@ -9,8 +9,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class DetailComponent implements OnInit{
 
-  constructor(private investissementService : InvestissementService,private activatedRoute: ActivatedRoute) {
-}
+  constructor(private investissementService : InvestissementService,private activatedRoute: ActivatedRoute) {}
 
 id: any;
 itemInv:any;

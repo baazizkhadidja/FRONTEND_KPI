@@ -1,5 +1,6 @@
-import { Component} from '@angular/core';
-import{ InvestissementService } from './../../services/investissement.service'
+import { Component, OnInit} from '@angular/core';
+import { InvestissementService } from './../../services/investissement.service'
+import { INVESTISSEMENT } from './../../investissement'
 
 
 @Component({
@@ -7,17 +8,19 @@ import{ InvestissementService } from './../../services/investissement.service'
   templateUrl: './investissement.component.html',
   styleUrls: ['./investissement.component.css']
 })
-export class InvestissementComponent {
-  investissements: any;
+export class InvestissementComponent implements OnInit{
+  investissements!: INVESTISSEMENT[];
+  searchValue!:string;
   
-  constructor(investissementService : InvestissementService){ 
-      investissementService.getInvestissement().subscribe(
-        res => { console.log(res); this.investissements =  res},
-        err => { console.log(err) }
-      )
+  constructor(private investissementService : InvestissementService){ }
+
+  ngOnInit(): void {
+      this.getInv();
   }
 
-
- 
-
-}
+  getInv(){
+    this.investissementService.getInvestissement().subscribe((res)=>{
+      this.investissements = res;
+    })
+  }   
+  }
