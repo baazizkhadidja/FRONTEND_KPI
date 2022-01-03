@@ -3,7 +3,7 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.3.
 
 ###For the Frontend:
-##1/ install the package node-modules:
+## 1/ install the package node-modules:
  npm install
 
 ##2/ installbootstrap: 
