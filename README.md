@@ -2,26 +2,24 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.3.
 
-## Development server
+###For the Frontend:
+##1/ install the package node-modules:
+ npm install
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+##2/ installbootstrap: 
+npm install --save bootstrap@latest
 
-## Code scaffolding
+##3/ installer search-filter:
+npm install --save ng2-search-filter
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+##4/ Run the application:
 
-## Build
+ng serve
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+##5/ Display the list of investments in the form of a table, by navigate to
 
-## Running unit tests
+http://127.0.0.1:4200
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+##6/ Clic on the 'id' to to show the details of a single investment
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+##7/ Trigger the API filters by typing text/number in the textbox
